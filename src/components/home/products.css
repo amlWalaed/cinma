@@ -1,0 +1,118 @@
+.products{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 10px 20px;
+    padding: 20px;
+}
+.product-card{
+    width: 30%;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: 1px solid #ccc;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    overflow: hidden;
+}
+@media (max-width: 767px) {
+    .product-card{
+        width: 100%;
+    } 
+}
+.product-card:hover{
+    box-shadow: 0px 0px 10px 10px #AAA;
+}
+.product-card .product-photo{
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    perspective: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.product-card .product-photo img{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+.product-card .product-photo .overlay{
+    display: none;
+}
+.product-card .product-photo:hover + .product-info{
+    display: none;
+}
+.product-card .product-photo:hover .overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+
+}
+.product-card .product-photo:hover .overlay span{
+    background-color: white;
+    padding: 5px 10px;
+    color: green;
+}
+.product-card .product-photo:hover{
+    height: 100%;
+}
+.product-card .product-photo:hover img{
+    transform: translateZ(50px);
+    -webkit-transform: translateZ(50px);
+    -moz-transform: translateZ(50px);
+    -ms-transform: translateZ(50px);
+    -o-transform: translateZ(50px);
+}
+.product-card .product-info {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+.product-card .product-info .product{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 0;
+    width: 100%;
+}
+.product-card .product-info a{
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin: 10px 0;
+    border: 1px solid blue;
+}
+.product-card .product-info a:hover{
+    background-color: white;
+    color: black;
+}
