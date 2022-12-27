@@ -1,0 +1,60 @@
+@import '../../common/colors.scss';
+
+.movie-card {
+    padding: 5px;
+    border: 1px solid $secondary_color;
+    position: relative;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    height: 65vh;
+    margin: 5px;
+
+    .movie-info {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height:25%;
+        h2 {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1rem;
+            border-bottom: 1px solid $secondary_color;
+            padding-bottom: 5px;
+        }
+        .vote{
+            span {
+                span:first-child{
+                    color: $font-secondary_color;
+                }
+            } 
+        } 
+        a {
+            background-color: $secondary_color;
+            border-radius: 6px;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            -ms-border-radius: 6px;
+            -o-border-radius: 6px;
+            padding: 10px 0;
+            &:hover {
+                opacity: 0.5;
+                font-weight: bold;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+        height: 75%;
+    }
+
+}

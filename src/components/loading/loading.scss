@@ -1,0 +1,90 @@
+@import '../../common/colors.scss';
+.loading{
+    height: 85.7vh;
+    text-align: center;
+    h2{
+        padding-top: 35px;
+    }
+}
+.circle1, .circle2{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+    border-radius: 50%;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    background-color: $font-secondary_color;
+    width: 50px;
+    height: 50px;
+}
+.circle1{
+    opacity: 0.5;
+    animation:fade-out 1s linear infinite  alternate;
+    -webkit-animation:fade-out 1s linear infinite  alternate;
+}
+.circle2{
+    animation:fade-in 1s linear infinite alternate;
+    -webkit-animation:fade-in 1s linear infinite alternate;
+}
+@keyframes fade-in {
+    0%{
+        width: 100px;
+        height: 100px;
+
+    }
+    25%{
+        width: 75px;
+        height: 75px;
+
+    }
+    50%{
+        width: 50px;
+        height: 50px;
+
+    }
+    75%{
+        width: 25px;
+        height: 25px;
+
+    }
+    100%{
+        width: 0px;
+        height: 0px;
+    }
+    
+}
+@keyframes fade-out {
+    0%{
+        width: 0px;
+        height: 0px;
+
+    }
+    25%{
+        width: 25px;
+        height: 25px;
+
+    }
+    50%{
+        width: 50px;
+        height: 50px;
+
+    }
+    75%{
+        width: 75px;
+        height: 75px;
+
+    }
+    100%{
+        width: 100px;
+        height: 100px;
+    }
+    
+}
